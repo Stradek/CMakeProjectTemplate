@@ -98,8 +98,8 @@ function(custom_cmake_setup)
     )
 
     # Search files in given directory with given filetype
-    function(get_files_for_file_type RESULT_VAR USE_RECURSE FILES_DIR FILE_TYPES)
-        #message(STATUS "get_files_for_file_type")
+    function(get_all_files_of_file_type RESULT_VAR USE_RECURSE FILES_DIR FILE_TYPES)
+        #message(STATUS "get_all_files_of_file_type")
         #message(STATUS "DIR: ${FILES_DIR}")
         #message(STATUS "FILETYPES: ${FILE_TYPES}")
         set(MATCHING_FILES "")
@@ -127,7 +127,7 @@ function(custom_cmake_setup)
         #message(STATUS "get_source_files")
         #message(STATUS "FILETYPES: ${SOURCE_FILE_TYPES}")
 
-        get_files_for_file_type(SOURCE_FILES ${USE_RECURSE} "${SOURCE_DIR}" "${SOURCE_FILE_TYPES}")
+        get_all_files_of_file_type(SOURCE_FILES ${USE_RECURSE} "${SOURCE_DIR}" "${SOURCE_FILE_TYPES}")
 
         #message(STATUS "SOURCE: ${SOURCE_FILES}")
 
@@ -139,7 +139,7 @@ function(custom_cmake_setup)
         #message(STATUS "get_header_files")
         #message(STATUS "FILETYPES: ${HEADER_FILE_TYPES}")
 
-        get_files_for_file_type(HEADER_FILES ${USE_RECURSE} "${INCLUDE_DIR}" "${HEADER_FILE_TYPES}")
+        get_all_files_of_file_type(HEADER_FILES ${USE_RECURSE} "${INCLUDE_DIR}" "${HEADER_FILE_TYPES}")
 
         #message(STATUS "HEADERS: ${HEADER_FILES}")
 
