@@ -64,4 +64,4 @@ jobs:
         path: ${{ env.BUILD_DIR }}
 
     - name: Build ${{matrix.target}} (${{matrix.configuration}})
-      run: cmake --build $env:BUILD_DIR --config ${{matrix.configuration}} --target ${{matrix.target}}
+      run: cmake --build $env:BUILD_DIR --config ${{matrix.configuration}}
