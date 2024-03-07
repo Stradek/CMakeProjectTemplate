@@ -1,3 +1,8 @@
+#
+# Copyright (c) 2024 Piotr Stradowski. All rights reserved.
+# Software distributed under the permissive MIT License.
+#
+
 function(custom_cmake_setup)
     # Prevent this function from running more than once.
     if(CUSTOM_CMAKE_SETUP_CALLED)
