@@ -45,6 +45,10 @@
                 "ENABLE_PROGRAM_OPTIMIZATION": {
                     "type": "BOOL",
                     "value": "OFF"
+                },
+                "CUSTOM_MACROS_PREFIX": {
+                    "type": "STRING",
+                    "value": "PROJECT_NAME_"
                 }
             },
             "condition": {
