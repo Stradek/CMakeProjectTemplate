@@ -1,4 +1,4 @@
-@echo on
+@echo off
 setlocal
 
 rem Copyright (c) 2024 Piotr Stradowski. All rights reserved.
@@ -12,15 +12,15 @@ cd %sourceDir%
 
 echo ---- Cleaning CMake artifact files...
 
-set "extensionsToDelete=.vcxproj .vcxproj.filters cmake_install.cmake .sln"
+set "extensionsToDelete=.vcxproj;.filters;cmake_install.cmake;.sln"
 set "filesToDelete=CMakeCache.txt"
-set "directoriesToDelete=x64;x86;bin"
+set "directoriesToDelete=x64;x86;bin;CMakeFiles"
 
 for %%i in (%extensionsToDelete%) do (
     for %%f in (%sourceDir%\*) do (
-        if "%%~xf" == "%%i" (
-            echo Deleting "%%f"
-            del /q "%%f"
+        if /i "%%~xf" == "%%~xi" (
+            echo Deleting "%%~ff"
+            del /q "%%~ff"
         )
     )
 )
@@ -32,7 +32,7 @@ for %%f in (%filesToDelete%) do (
 
 for %%d in (%directoriesToDelete%) do (
     echo Deleting directory "%%d"
-    rmdir /s /q "%sourceDir%\%%d"
+    if exist "%sourceDir%\%%d" rmdir /s /q "%sourceDir%\%%d"
 )
 
 echo ---- Cleaning CMake artifact directories...
