@@ -14,7 +14,7 @@ echo ---- Cleaning CMake artifact files...
 
 set "extensionsToDelete=.vcxproj .vcxproj.filters cmake_install.cmake .sln"
 set "filesToDelete=CMakeCache.txt"
-set "directoriesToDelete=x64;x86;build;bin"
+set "directoriesToDelete=x64;x86;bin"
 
 for %%i in (%extensionsToDelete%) do (
     for %%f in (%sourceDir%\*) do (
