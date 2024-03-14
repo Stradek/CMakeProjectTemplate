@@ -10,7 +10,7 @@ if [%sourceDir%] == [] set sourceDir="%myPath%\.."
 
 cd %sourceDir%
 
-echo ---- Cleaning CMake artifact files...
+echo ---- Cleaning CMake artifacts...
 
 set "extensionsToDelete=.vcxproj;.filters;cmake_install.cmake;.sln"
 set "filesToDelete=CMakeCache.txt"
@@ -35,7 +35,10 @@ for %%d in (%directoriesToDelete%) do (
     if exist "%sourceDir%\%%d" rmdir /s /q "%sourceDir%\%%d"
 )
 
-echo ---- Cleaning CMake artifact directories...
+for /d %%d in ("%sourceDir%\*.dir") do (
+    echo Deleting directory "%%~nxd"
+    rmdir /s /q "%%d"
+)
 
 pause
 exit
