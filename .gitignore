@@ -1,5 +1,55 @@
-# Visual Studio Code
+# VS Code workspace
 .vscode/
+
+# Idea Jetbrains Rider folder
+.idea/
+
+# Solution files
+*.sln
+*.vcxproj
+*.vcxproj.filters
+
+# Compiled Object files
+**/.DS_Store
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+# CMake artifacts
+/x64/
+/x86/
+/*.dir/
+**/CMakeFiles/
+**/cmake-build-debug
+**/CMakeCache.txt
+**/cmake_install.cmake
+**/install_manifest.txt
+**/CTestTestfile.cmake
+**/Makefile
+**/*.cbp
+**/CMakeScripts
+**/compile_commands.json
 
 # Binaries directory
 /bin/
