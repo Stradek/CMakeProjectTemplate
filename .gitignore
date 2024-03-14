@@ -6,53 +6,44 @@
 
 # Solution files
 *.sln
+
+# MSBuild setting files
 *.vcxproj
 *.vcxproj.filters
 
-# Compiled Object files
-**/.DS_Store
-*.slo
-*.lo
-*.o
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+*_i.c
+*_p.c
+*.ilk
+*.meta
 *.obj
-
-# Precompiled Headers
-*.gch
 *.pch
+*.pdb
+*.pgc
+*.pgd
+*.rsp
+*.sbr
+*.tlb
+*.tli
+*.tlh
+*.tmp
+*.log
+*.tlog
+*.vspscc
+*.vssscc
+.builds
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
 
 # CMake artifacts
-/x64/
-/x86/
-/*.dir/
-**/CMakeFiles/
-**/cmake-build-debug
-**/CMakeCache.txt
-**/cmake_install.cmake
-**/install_manifest.txt
-**/CTestTestfile.cmake
-**/Makefile
-**/*.cbp
-**/CMakeScripts
-**/compile_commands.json
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
 
 # Binaries directory
-/bin/
+bin/
 
 # Bulid artifacts directory
-/build/
+build/
