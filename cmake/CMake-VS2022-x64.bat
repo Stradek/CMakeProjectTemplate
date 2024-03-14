@@ -11,6 +11,8 @@ set buildDir=%2
 if [%sourceDir%] == [] set sourceDir="%myPath%.."
 if [%buildDir%] == [] set buildDir="%sourceDir%\build\CMake-VS2022-x64"
 
+cd %sourceDir%
+
 echo ---- Preparing build directory...
 mkdir %buildDir% >nul 2>&1
 
@@ -26,6 +28,8 @@ cmake.exe -S %sourceDir% -B %buildDir% --preset x64-windows-release
 if %ERRORLEVEL% NEQ 0 (
     goto Error_CMakeBuildingProjectFailed
 )
+
+move %buildDir%\*.sln %sourceDir%
 
 goto:EndCall
 
